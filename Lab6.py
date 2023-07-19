@@ -26,6 +26,7 @@ def encode(password):  # function to encode password
         else:
             encoded += '2'
     return encoded
+#Decode Portion added By Mohamed L Afia
 def decode_pass(password):
     decoded_pass =""
     for digit in password:
