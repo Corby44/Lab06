@@ -26,34 +26,12 @@ def encode(password):  # function to encode password
         else:
             encoded += '2'
     return encoded
-
-
-'''def decode(encoded):  # function to decode password
-    decoded = ""  # decoded password variable
-    for integer in encoded:  # gates used to catch encoded password integer and subtract 3
-        if integer == '0':
-            decoded += '7'
-        elif integer == '1':
-            decoded += '8'
-        elif integer == '2':
-            decoded += '9'
-        elif integer == '3':
-            decoded += '0'
-        elif integer == '4':
-            decoded += '1'
-        elif integer == '5':
-            decoded += '2'
-        elif integer == '6':
-            decoded += '3'
-        elif integer == '7':
-            decoded += '4'
-        elif integer == '8':
-            decoded += '5'
-        else:
-            decoded += '6'
-    return decoded
-'''
-
+def decode_pass(password):
+    decoded_pass =""
+    for digit in password:
+        decoded_dig = str((int(digit)-3))
+        decoded_pass += decoded_dig
+    return decoded_pass
 def main():
     while True:
         print('Menu')  # menu options
@@ -69,7 +47,7 @@ def main():
             encoded_password = encode(user_password)
             print('Your password has been encoded and stored!\n')
         elif user_input == 2:  # user wants password decoded - displays encoded and decoded password
-            decoded_password = decode(encoded_password)
+            decoded_password = decode_pass(encoded_password)
             print(f'The encoded password is {encoded_password}, and the original password is {decoded_password}.\n')
         elif user_input == 3:  # terminates program
             break
