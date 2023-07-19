@@ -28,7 +28,7 @@ def encode(password):  # function to encode password
     return encoded
 
 
-def decode(encoded):  # function to decode password
+'''def decode(encoded):  # function to decode password
     decoded = ""  # decoded password variable
     for integer in encoded:  # gates used to catch encoded password integer and subtract 3
         if integer == '0':
@@ -52,7 +52,7 @@ def decode(encoded):  # function to decode password
         else:
             decoded += '6'
     return decoded
-
+'''
 
 def main():
     while True:
